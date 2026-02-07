@@ -40,13 +40,13 @@ An attribute with a low Gini index is always preferred over a high one.
 
 $$Gini = 1 - \sum_{i=1}^{C} (p_i)^2$$
 
-*Where $p_i$ is the probability of an element belonging to a specific class.*
+Where $$p_i$$ is the probability of an element belonging to a specific class.
 
 ### Entropy Foundation
 My research also covered Shannon Entropy, which measures information content. 
 While this implementation uses Gini, the logic is rooted in the same principles of minimizing disorder.
 
-$$H(X) = -\sum P_i \log_2 P_i$$
+$$H(X) = -\sum_{i=1}^{C} p_i \log_2(p_i)$$
 
 ## 🔬 From Theory to Code
 
@@ -89,12 +89,11 @@ The model follows the **CART (Classification And Regression Tree)** methodology:
 
 ## 🚀 Usage
 
-### Import and Initialize
-
 ```python
 from classification_binaryTree import classification_binaryTree
 
-model = classification_binaryTree(maxDepth=5)
+clf = classification_binaryTree(maxDepth=5)
+
 ```
 
 ### Fit the Model
@@ -158,4 +157,4 @@ It now serves as a conceptual foundation for further studies in Machine Learning
 ## 👤 Author
 
 **Bogdan-Vlad Gurău**  
-Computer Engineering student(UTCN/CTI)
+Computer Engineering student (UTCN/CTI)
